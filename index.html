@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated colorful checkboxes</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="button one">
+        <div class="check"></div>
+        </div>
+
+        <div class="button two">
+            <div class="check"></div>
+        </div>
+         
+        <div class="button three">
+            <div class="check"></div>
+        </div>
+
+        <div class="button four">
+            <div class="check"></div>
+       </div>
+
+       <div class="button five">
+           <div class="check"></div>
+       </div>
+     </div>
+<script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+
+ 
+ (function(){
+     $(document).ready(function(){
+         var changeButton;
+         changeButton = function(className,colorName) {
+             return $(className).click(function(){
+$(this).toggleClass(colorName);
+return $(this).children().toggleClass("scaleNormal");
+             });
+         };
+      changeButton(".one","red");
+      changeButton(".two","blue");
+      changeButton(".three","green");
+      changeButton(".four","purple");
+      changeButton(".five","yellow");
+     });
+ }).call(this);
+</script>
+</body>
+</html>
